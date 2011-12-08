@@ -1,0 +1,163 @@
+body {
+	background: url('../img/o2rey38.png') repeat;
+	color:#ccc;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: 1px 0px 1px #999;
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
+
+
+.photo {
+	height:175px;
+	margin: -2px 0;
+	padding: 0px;
+	overflow: hidden;
+	
+	}
+
+
+li {
+	list-style-type: none;
+	color:#ccc;
+}
+
+.photo-item img{
+	width: 270px;
+	overflow: hidden;
+	top: 50%;
+	-webkit-transform: scale(1.4);
+	-webkit-transition: -webkit-transform 0.8s ease-in-out;
+}
+
+#header {
+	float: left;
+	width:300px;
+}
+
+.header-links {
+	padding:4px;
+	margin-bottom: 45px;
+}
+
+.header-links a {
+	text-decoration: none;
+	color:#eee;
+}
+
+ul#filters {
+	padding:2px;
+	
+}
+
+ul#filters li{
+	display: inline;
+	padding:3px;
+}
+
+ul#filters li a{
+	text-decoration: none;
+	color: #ccc;
+}
+
+ul#filters li a.show-all{
+	font-size:2em;
+}
+
+ul#filters li a:hover{
+	color: #fff;
+}
+
+.photo-item img:hover {
+	-webkit-transform: scale(1.0);
+	}
+.hover-message {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	z-index: 10000;
+	pointer-events:none;
+}
+
+.remove {
+	position: fixed;
+	top: 146px;
+	left: 255px;
+	width: 8px;
+	height: 18px;
+	background-color: black;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	z-index: 10000;
+	padding: 6px;
+	margin: -5px;
+}
+
+/* Glyph, by Harry Roberts */
+		
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative; 
+    top: -0.7em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #0a0a0a;
+}

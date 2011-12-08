@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset=UTF-8>
+	
+	<title>i hope this works...</title>
+	
+	<link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+	
+	
+</head>
+<body>
+	
+	<div id="header">
+		<h1>Los Photos</h1>
+		<div id="photo-count"></div>
+		<hr class="style-eight" />
+		<ul class="header-links">
+			<li><span class="create"><a href="#">add city pictures</a></span></li>
+			<li><span id="clear-all"><a href="#">clear all</a></span></li>
+		</ul>
+		<hr class="style-eight" />
+			<div id="photo-tags"></div>		
+	</div>
+	
+	<div id="gallery-app">
+		<div id="photos">
+			<ul id="photo-list" style="display:none"></ul>
+		</div>
+	</div>
+
+
+	<script src="lib/underscore.js"></script>
+	<script src="lib/jquery-1.7.min.js"></script>
+	<script src="lib/json2.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script src="lib/backbone-localstorage.js"></script>
+	<script src="lib/jquery.isotope.js"></script>
+	
+	<script type="text/javascript" src="lib/fancybox/jquery.easing-1.3.pack.js"></script>
+
+	
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css?v=2.0.3" type="text/css" media="screen" />
+	<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js?v=2.0.3"></script>
+
+	<script src="src/custom.js"></script>
+	<script src="src/gallery.js"></script>
+	
+	
+
+	<!-- templates -->
+	
+	<!-- Photo in list -->
+	<script type="text/template" id="photo-template">
+		<div class="photo">
+			<a class="detail" rel="group" href="<%= src %>" title="<%=caption%>, <%=author%>"><img src="<%= src %>" /></a>
+			<div class="hover-message" style="display:none"><%=caption%></div>
+			<a class="remove" style="display:none">x</a>
+			<div class="details" style="display:none">
+				<a href="#/detail/<%= id %>"><%= caption %></a>
+				| <span class="tags"><%= tags.join(" ") %></span>
+				| 
+			</div>
+		</div>
+	</script>
+	
+	<!-- Gallery index outer application template -->
+	<script type="text/template" id="count-template">
+		<% if (count) { %>
+			<h2 class="photo-count">
+				<span class="number"><%= count %></span>
+				<span class="word"><%= count == 1 ? 'photo' : 'photos' %></span>
+			</h2>
+		<% } %>
+	</script>
+	
+	<!-- Gallery index outer application template -->
+	<script type="text/template" id="tags-template">
+		<ul id="filters">
+			<li><a href="#" class="show-all" data-filter="*">show all</a></li><li>
+		<% if (allTags) { %>
+				<% _.each(allTags, function(tag) { %>
+					<li><a href="#" data-filter=".<%= tag %>"><%= tag %></a></li> 
+				<% }); %>
+		<% } %>
+		</ul>
+	</script>
+	
+	
+	
+	
+</body>
+</html>

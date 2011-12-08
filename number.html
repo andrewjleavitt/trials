@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset=UTF-8>
+	<link href="css/number.css" media="all" rel="stylesheet" type="text/css">
+	<title>i hope this works...</title>
+</head>
+<body>
+	
+	<!-- Todo App Interface -->
+
+	    <div id="numberapp">
+
+	      <div class="title">
+	        <h1>NumberToWords</h1>
+	      </div>
+
+	      <div class="content">
+
+	        <div id="create-number">
+	          <input id="new-number" placeholder="Enter a number" type="text" />
+	        </div>
+
+	        <div id="numbers">
+	          <ul id="number-list"></ul>
+	        </div>
+
+	      </div>
+
+	    </div>
+	
+		<script src="lib/underscore.js"></script>
+		<script src="lib/jquery-1.7.min.js"></script>
+		<script src="lib/json2.js"></script>
+		<script src="lib/backbone.js"></script>
+		<script src="lib/backbone-localstorage.js"></script>
+		<script src="src/app.js"></script>
+
+	    <!-- Templates -->
+
+	    <script type="text/template" id="number-template">
+	      <div class="number">
+	        <div class="display">
+	          <div class="number-text">
+			  <p><%=number %>:</p>
+			  <p><%=words %></p></div>
+	        </div>
+			<span class="number-destroy">[<span class='red'>x</span>]</span>
+	      </div>
+	    </script>
+	
+
+</body>
+</html>

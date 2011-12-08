@@ -1,0 +1,15 @@
+**notes
+
+do single view for photo detail
+
+categories?? -> filters
+
+do slide in, out on create, destroy photo -> izotope should do this
+
+isotope filtering, sorting
+
+captions to bounce in and to the side
+
+edit captions??
+
+add images from flickr -> done
